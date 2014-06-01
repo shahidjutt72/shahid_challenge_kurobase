@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
   end
 
   def show  
-    render :json => @movie
+    render :json => @movie.to_json(:methods => [:tag_list])
   end
   
   def create
