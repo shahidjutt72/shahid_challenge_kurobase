@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   end
 
   def liked_movies
-    render :json => @user.liked_movies.to_json
+    render :json => @user.liked_movies.to_json(:methods => [:tag_list])
   end 
 
   private
